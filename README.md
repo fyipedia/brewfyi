@@ -2,6 +2,10 @@
 
 Coffee knowledge API client for developers — search coffee varieties, brew methods, and terms from [BrewFYI](https://brewfyi.com).
 
+<p align="center">
+  <img src="demo.gif" alt="brewfyi demo — coffee API search and lookup" width="800">
+</p>
+
 ## Install
 
 ```bash
