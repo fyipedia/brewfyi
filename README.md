@@ -73,6 +73,8 @@ BrewFYI catalogs 72 distinct varieties with genetic lineage, flavor profiles, an
 | Hybrid/Modern | Castillo, Colombia, Catimor, Sarchimor | Disease resistant, improving cup quality |
 | Robusta | Robusta, Conilon | High caffeine, earthy, bitter, crema |
 
+Learn more: [Browse Coffee Origins](https://brewfyi.com/origin/) · [Country Profiles](https://brewfyi.com/country/)
+
 ### Processing Methods
 
 Post-harvest processing dramatically affects flavor. The same coffee cherry processed differently produces entirely different cup profiles:
@@ -84,6 +86,8 @@ Post-harvest processing dramatically affects flavor. The same coffee cherry proc
 | Honey | Pulp removed, mucilage left during drying | Sweet, balanced, complex |
 | Anaerobic | Sealed fermentation tanks, controlled environment | Intense, unique fermentation flavors |
 | Wet-Hulled (Giling Basah) | Partially dried, hulled wet (Indonesia) | Earthy, low acidity, full body |
+
+Learn more: [Processing Methods Guide](https://brewfyi.com/processing/) · [Coffee Glossary](https://brewfyi.com/glossary/)
 
 ### Brew Methods
 
@@ -100,6 +104,8 @@ BrewFYI covers 21 brewing methods with optimal parameters for water temperature,
 | Chemex | Drip/Percolation | 3:30-4:30 | Medium-coarse | Clean, bright, paper filtered |
 | Siphon | Vacuum | 1:30-2:00 | Medium | Theatrical, clean, aromatic |
 
+Learn more: [21 Brew Methods](https://brewfyi.com/method/) · [Brewing Tools](https://brewfyi.com/tools/)
+
 ### Roast Levels
 
 Roast level determines the balance between origin character and roast-developed flavors. Lighter roasts preserve acidity and origin terroir; darker roasts emphasize body, bitterness, and caramelization:
@@ -112,11 +118,15 @@ Roast level determines the balance between origin character and roast-developed 
 | Medium-Dark | 230-240C | Bittersweet, cocoa, reduced acidity, fuller body |
 | Dark | 240C+ | Smoky, bitter, oily surface, minimal origin character |
 
+Learn more: [Roast Level Guide](https://brewfyi.com/roast/) · [Coffee Guides](https://brewfyi.com/guide/)
+
 ### Origin Countries
 
 Coffee is grown in the "Bean Belt" between the Tropics of Cancer and Capricorn. BrewFYI covers 20 origin countries with altitude ranges, harvest seasons, typical processing methods, and regional flavor profiles.
 
 Top producers include Brazil (world's largest), Vietnam (Robusta leader), Colombia, Ethiopia (birthplace of coffee), Indonesia, Honduras, India, Uganda, Mexico, and Guatemala. Specialty coffee increasingly highlights single-origin and micro-lot traceable sourcing.
+
+Learn more: [Browse Coffee Origins](https://brewfyi.com/origin/) · [Country Profiles](https://brewfyi.com/country/)
 
 ## API Endpoints
 
