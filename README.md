@@ -6,9 +6,7 @@
 
 Coffee knowledge API client for Python. Search 72 coffee varieties, 20 origin countries, 21 brew methods, and coffee terminology from [BrewFYI](https://brewfyi.com) -- the complete coffee reference with 120 expert guides covering everything from Arabica genetics and processing methods to SCA cupping protocols and roast profiling.
 
-> **Explore coffee at [brewfyi.com](https://brewfyi.com)** -- [Coffee Varieties](https://brewfyi.com/varieties/) | [Origins](https://brewfyi.com/origins/) | [Brew Methods](https://brewfyi.com/methods/) | [Coffee Guides](https://brewfyi.com/guides/)
-
-<p align="center">
+> **Explore coffee at [brewfyi.com](https://brewfyi.com)** -- [Coffee Varieties](https://brewfyi.com/varieties/) | [Origins](https://brewfyi.com/origins/) | [Brew Methods](https://brewfyi.com/methods/) | <p align="center">
   <img src="https://raw.githubusercontent.com/fyipedia/brewfyi/main/demo.gif" alt="brewfyi demo -- coffee API search and lookup" width="800">
 </p>
 
@@ -72,9 +70,7 @@ BrewFYI catalogs 72 distinct varieties with genetic lineage, flavor profiles, an
 | Hybrid/Modern | Castillo, Colombia, Catimor, Sarchimor | Disease resistant, improving cup quality |
 | Robusta | Robusta, Conilon | High caffeine, earthy, bitter, crema |
 
-Learn more: [Browse Coffee Origins](https://brewfyi.com/origin/) · [Country Profiles](https://brewfyi.com/country/)
-
-### Processing Methods
+Learn more: [Browse Coffee Origins](https://brewfyi.com/origins/) · ### Processing Methods
 
 Post-harvest processing dramatically affects flavor. The same coffee cherry processed differently produces entirely different cup profiles:
 
@@ -103,7 +99,7 @@ BrewFYI covers 21 brewing methods with optimal parameters for water temperature,
 | Chemex | Drip/Percolation | 3:30-4:30 | Medium-coarse | Clean, bright, paper filtered |
 | Siphon | Vacuum | 1:30-2:00 | Medium | Theatrical, clean, aromatic |
 
-Learn more: [21 Brew Methods](https://brewfyi.com/method/) · [Brewing Tools](https://brewfyi.com/tools/)
+Learn more: [21 Brew Methods](https://brewfyi.com/methods/) · [Brewing Tools](https://brewfyi.com/tools/)
 
 ### Roast Levels
 
@@ -117,7 +113,7 @@ Roast level determines the balance between origin character and roast-developed 
 | Medium-Dark | 230-240C | Bittersweet, cocoa, reduced acidity, fuller body |
 | Dark | 240C+ | Smoky, bitter, oily surface, minimal origin character |
 
-Learn more: [Roast Level Guide](https://brewfyi.com/roast/) · [Coffee Guides](https://brewfyi.com/guide/)
+Learn more: [Coffee Guides](https://brewfyi.com/guide/)
 
 ### Origin Countries
 
@@ -125,9 +121,7 @@ Coffee is grown in the "Bean Belt" between the Tropics of Cancer and Capricorn. 
 
 Top producers include Brazil (world's largest), Vietnam (Robusta leader), Colombia, Ethiopia (birthplace of coffee), Indonesia, Honduras, India, Uganda, Mexico, and Guatemala. Specialty coffee increasingly highlights single-origin and micro-lot traceable sourcing.
 
-Learn more: [Browse Coffee Origins](https://brewfyi.com/origin/) · [Country Profiles](https://brewfyi.com/country/)
-
-## API Endpoints
+Learn more: [Browse Coffee Origins](https://brewfyi.com/origins/) · ## API Endpoints
 
 All endpoints are free, require no authentication, and return JSON with CORS enabled.
 
@@ -151,7 +145,7 @@ All endpoints are free, require no authentication, and return JSON with CORS ena
 ### Example
 
 ```bash
-curl -s "https://brewfyi.com/api/v1/varieties/gesha/"
+curl -s ""
 ```
 
 ```json
@@ -164,12 +158,12 @@ curl -s "https://brewfyi.com/api/v1/varieties/gesha/"
   "flavor_profile": ["jasmine", "bergamot", "peach", "tropical fruit", "honey"],
   "altitude_range": "1,500-2,000m",
   "processing": ["washed", "natural", "honey"],
-  "url": "https://brewfyi.com/varieties/gesha/"
+  "url": ""
 }
 ```
 
 Full API documentation: [brewfyi.com/developers/](https://brewfyi.com/developers/).
-OpenAPI 3.1.0 spec: [brewfyi.com/api/v1/openapi.json](https://brewfyi.com/api/v1/openapi.json).
+OpenAPI 3.1.0 spec: .
 
 ## Command-Line Interface
 
@@ -235,11 +229,7 @@ with BrewFYI() as api:
 
 - **Reference**: [Coffee Varieties](https://brewfyi.com/varieties/) | [Origins](https://brewfyi.com/origins/) | [Brew Methods](https://brewfyi.com/methods/)
 - **Glossary**: [Coffee Terminology](https://brewfyi.com/glossary/)
-- **Guides**: [Coffee Guides](https://brewfyi.com/guides/)
-- **Compare**: [Variety Comparisons](https://brewfyi.com/compare/)
-- **API**: [Developer Docs](https://brewfyi.com/developers/) | [OpenAPI Spec](https://brewfyi.com/api/v1/openapi.json)
-
-## Beverage FYI Family
+- **Guides**: - **Compare**: - **API**: [Developer Docs](https://brewfyi.com/developers/) | ## Beverage FYI Family
 
 Part of the [FYIPedia](https://fyipedia.com) open-source developer tools ecosystem -- world beverages from cocktails to sake.
 
