@@ -1,67 +1,88 @@
-"""MCP server for brewfyi — coffee knowledge tools for AI assistants.
+"""MCP server for brewfyi — AI assistant tools for brewfyi.com.
 
-Requires the ``mcp`` extra: ``pip install brewfyi[mcp]``
-
-Run as a standalone server::
-
-    python -m brewfyi.mcp_server
-
-Or configure in ``claude_desktop_config.json``::
-
-    {
-        "mcpServers": {
-            "brewfyi": {
-                "command": "python",
-                "args": ["-m", "brewfyi.mcp_server"]
-            }
-        }
-    }
+Run: uvx --from "brewfyi[mcp]" python -m brewfyi.mcp_server
 """
-
 from __future__ import annotations
-
-from typing import Any
 
 from mcp.server.fastmcp import FastMCP
 
-mcp = FastMCP("brewfyi")
+mcp = FastMCP("BrewFYI")
 
 
 @mcp.tool()
-def coffee_search(query: str) -> str:
-    """Search coffee varieties, brew methods, and glossary terms from BrewFYI.
-
-    Search the BrewFYI coffee encyclopedia for varieties, brewing methods,
-    origins, processing methods, roasting levels, flavors, and terminology.
+def list_brew_methods(limit: int = 20, offset: int = 0) -> str:
+    """List brew_methods from brewfyi.com.
 
     Args:
-        query: Search term (e.g. "espresso", "arabica", "pour over", "chemex").
+        limit: Maximum number of results. Default 20.
+        offset: Number of results to skip. Default 0.
+    """
+    from brewfyi.api import BrewFYI
+
+    with BrewFYI() as api:
+        data = api.list_brew_methods(limit=limit, offset=offset)
+        results = data.get("results", data) if isinstance(data, dict) else data
+        if not results:
+            return "No brew_methods found."
+        items = results[:limit] if isinstance(results, list) else []
+        return "\n".join(f"- {item.get('name', item.get('slug', '?'))}" for item in items)
+
+
+@mcp.tool()
+def get_brew_method(slug: str) -> str:
+    """Get detailed information about a specific brew_method.
+
+    Args:
+        slug: URL slug identifier for the brew_method.
+    """
+    from brewfyi.api import BrewFYI
+
+    with BrewFYI() as api:
+        data = api.get_brew_method(slug)
+        return str(data)
+
+
+@mcp.tool()
+def list_species(limit: int = 20, offset: int = 0) -> str:
+    """List species from brewfyi.com.
+
+    Args:
+        limit: Maximum number of results. Default 20.
+        offset: Number of results to skip. Default 0.
+    """
+    from brewfyi.api import BrewFYI
+
+    with BrewFYI() as api:
+        data = api.list_species(limit=limit, offset=offset)
+        results = data.get("results", data) if isinstance(data, dict) else data
+        if not results:
+            return "No species found."
+        items = results[:limit] if isinstance(results, list) else []
+        return "\n".join(f"- {item.get('name', item.get('slug', '?'))}" for item in items)
+
+
+@mcp.tool()
+def search_brew(query: str) -> str:
+    """Search brewfyi.com for coffee varieties, brew methods, and roasting.
+
+    Args:
+        query: Search query string.
     """
     from brewfyi.api import BrewFYI
 
     with BrewFYI() as api:
         data = api.search(query)
+        results = data.get("results", data) if isinstance(data, dict) else data
+        if not results:
+            return f"No results found for \"{query}\"."
+        items = results[:10] if isinstance(results, list) else []
+        return "\n".join(f"- {item.get('name', item.get('slug', '?'))}" for item in items)
 
-    results: list[dict[str, Any]] = data.get("results", [])
-    if not results:
-        return f"No results found for '{query}'."
 
-    lines = [
-        f"## Coffee Search: {query}",
-        "",
-        f"Found {len(results)} result(s):",
-        "",
-        "| Type | Name | URL |",
-        "|------|------|-----|",
-    ]
-    for item in results:
-        item_type = item.get("type", "")
-        name = item.get("name", "")
-        url = item.get("url", "")
-        lines.append(f"| {item_type} | {name} | {url} |")
-
-    return "\n".join(lines)
+def main() -> None:
+    """Run the MCP server."""
+    mcp.run()
 
 
 if __name__ == "__main__":
-    mcp.run()
+    main()
