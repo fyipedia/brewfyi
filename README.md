@@ -254,6 +254,15 @@ Embed [BrewFYI](https://brewfyi.com) widgets on any website with [brewfyi-embed]
 
 Zero dependencies · Shadow DOM · 4 themes (light/dark/sepia/auto) · [Widget docs](https://widget.brewfyi.com)
 
+## Recently Updated (v0.1.5)
+
+Latest content state on [https://brewfyi.com](https://brewfyi.com):
+- [Homepage](https://brewfyi.com)
+- [Developer documentation](https://brewfyi.com/developers/)
+- [Sitemap (full content index)](https://brewfyi.com/sitemap.xml)
+
+Version bumped 2026-05-27 as part of the FYIPedia [SEO recovery refresh](https://github.com/dobestan).
+
 ## License
 
 MIT
