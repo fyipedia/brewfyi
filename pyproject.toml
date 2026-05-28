@@ -1,6 +1,6 @@
 [project]
 name = "brewfyi"
-version = "0.1.4"
+version = "0.1.5"
 description = "Coffee knowledge API client — search coffee varieties, brew methods, and terms from BrewFYI."
 readme = "README.md"
 license = "MIT"
